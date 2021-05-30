@@ -1,7 +1,9 @@
 # MundoDisneyApiRest
 ApiRest del Mundo de Disney para alkemy challenge hecho en C# con asp.net CORE
 
-Como gestor de base de datos SqlServer
+Como motor de base de datos use SqlServer
+añadi datos alatorios en la ejecucion del program.cs para probar la api
+
 Para el envio de email se añadio el paquete de EASendMail
 JwtBearer para la auteticacion
 Swagger para la vista de funcionamiento de controllers
