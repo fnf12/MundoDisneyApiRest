@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MundoDisneyApiRest.Models;
 
 namespace MundoDisneyApiRest.Migrations
 {
     [DbContext(typeof(DisneyContext))]
-    partial class DisneyContextModelSnapshot : ModelSnapshot
+    [Migration("20210608070837_decimalcorrecion")]
+    partial class decimalcorrecion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

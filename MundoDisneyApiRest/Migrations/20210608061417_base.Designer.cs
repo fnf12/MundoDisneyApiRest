@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MundoDisneyApiRest.Models;
 
 namespace MundoDisneyApiRest.Migrations
 {
     [DbContext(typeof(DisneyContext))]
-    partial class DisneyContextModelSnapshot : ModelSnapshot
+    [Migration("20210608061417_base")]
+    partial class @base
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace MundoDisneyApiRest.Migrations
 
                     b.Property<decimal>("Peso")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("decimal(5,2)")
+                        .HasColumnType("decimal(3,2)")
                         .HasDefaultValue(0m)
                         .HasColumnName("peso");
 

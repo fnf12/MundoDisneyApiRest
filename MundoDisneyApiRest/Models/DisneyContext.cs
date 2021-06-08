@@ -132,7 +132,7 @@ namespace MundoDisneyApiRest.Models
 
                 entity.Property(e => e.Peso)
                     .HasDefaultValue(0)
-                    .HasColumnType("decimal(3,1)")
+                    .HasColumnType("decimal(5,2)")
                     .HasColumnName("peso");
 
                 entity.Property(e => e.Historia)

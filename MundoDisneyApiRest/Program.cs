@@ -31,7 +31,7 @@ namespace MundoDisneyApiRest
                 var gaston = new Character() { Imagen = "link:image.jpg", Nombre = "gaston", Edad = 23, Peso = 100, Historia = "un villano de la peli" };
                 var principe = new Character() { Imagen = "link:image.jpg", Nombre = "principe adam", Edad = 23, Peso = 90, Historia = "un principe cualquiera" };
                 var simba = new Character() { Imagen = "link:image.jpg", Nombre = "simba", Edad = 10, Peso = 500, Historia = "el nuevo rey de la selva" };
-                var scar = new Character() { Imagen = "link:image.jpg", Nombre = "scar", Edad = 20, Peso = 400, Historia = "villano y hrno de mufasa" };
+                var scar = new Character() { Imagen = "link:image.jpg", Nombre = "scar", Edad = 20, Peso = 523, Historia = "villano y hrno de mufasa" };
 
                 var toystory = new MovieTV() { Titulo = "toystory 1", Genres = { genres[1] , genres[2], genres[6] }, Characters = { woody, buzz }, FechaCreacion = new DateTime(1995,11,22) };
                 var mulan = new MovieTV() { Titulo = "mulan", Genres = { genres[1], genres[2], genres[0]}, Characters = { mulann, mushu }, FechaCreacion = new DateTime(1998, 6, 19) };

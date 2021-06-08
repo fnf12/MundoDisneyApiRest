@@ -22,8 +22,6 @@ namespace MundoDisneyApiRest.DTOs
 
         [Range(0, 9999, ErrorMessage = "ingresar una edad maximo 9999")]
         public int Edad { get; set; }
-
-        [RegularExpression(@"^\d+.\d{3,2}$", ErrorMessage = "El peso no puede tener mas de 2 decimales")]
         public double Peso { get; set; }
 
         [StringLength(maximumLength: 255,
