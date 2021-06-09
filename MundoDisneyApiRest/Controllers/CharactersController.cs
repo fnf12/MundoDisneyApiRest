@@ -105,8 +105,11 @@ namespace MundoDisneyApiRest.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCharacter(int id, CharacterPostDto characterdto)
         {
+            var character = await _context.Characters
+                .Include(x => x.MovieTVs)
+                .SingleAsync(b => b.IdCharacter == id);
 
-            if (id != characterdto.IdCharacter)
+            if (id != character.IdCharacter)
             {
                 return BadRequest();
             }
@@ -115,10 +118,6 @@ namespace MundoDisneyApiRest.Controllers
             {
                 return BadRequest("El nombre ya existe");
             }
-
-            var character = await _context.Characters
-                .Include(x => x.MovieTVs)
-                .SingleAsync(b => b.IdCharacter == id);
 
             var MovChar = characterdto.MovieTVs.Select(x => new MovieTVsCharacter
             {
