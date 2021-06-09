@@ -9,3 +9,5 @@ JwtBearer para la auteticacion
 Swagger para la vista de funcionamiento de controllers
 Newtonsoftjson para la muestra de datos y comentarios en los controllers
 Se añadieron algunos unit test para las pruebas de errores con base de datos inMemory
+
+video explicativo : https://youtu.be/fpquYeqUOzQ
