@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace MundoDisneyApiRest.services
 {
     public class Logic
@@ -14,6 +15,7 @@ namespace MundoDisneyApiRest.services
 
             try
             {
+
                 SmtpMail correo = new("Tryit")
                 {
                     From = "fnf12soft@gmail.com",
@@ -21,6 +23,7 @@ namespace MundoDisneyApiRest.services
                     Subject = subject,
                     TextBody = message
                 };
+
 
                 SmtpServer server = new("smtp.gmail.com")
                 {
