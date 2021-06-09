@@ -121,7 +121,12 @@ namespace MundoDisneyApiRest.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMovieTV(int id, MoviePostDto movieTVdto)
         {
-            if (id != movieTVdto.IdMovieTV)
+            var movieTV = await _context.MovieTVs
+                .Include(x => x.Characters)
+                .Include(x => x.Genres)
+                .SingleAsync(b => b.IdMovieTV == id);
+
+            if (id != movieTV.IdMovieTV)
             {
                 return BadRequest();
             }
@@ -130,11 +135,6 @@ namespace MundoDisneyApiRest.Controllers
             {
                 return BadRequest("El titulo ya existe");
             }
-
-            var movieTV = await _context.MovieTVs
-                .Include(x => x.Characters)
-                .Include(x => x.Genres)
-                .SingleAsync(b => b.IdMovieTV == id);
 
             var relacion = movieTVdto.Genres.Select(x => new GenreMovieTVs
             {
